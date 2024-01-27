@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="#123882" name="theme-color"/>
+
+  <title>Test Drive UI</title>
+  <link rel="icon" href="img/racing.png"  type="image/x-icon">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="pre-loader">
+    <div class="circle">
+    </div>
+  </div>
+
+<!-- success popup -->
+  <div class="popup-box">
+    <div class="success-content">
+      <div class="head">
+      <img src="img/success-icon.svg">
+      <p>SUCCESS</p>
+      </div>
+      <div class="msg">
+      <p> </p>
+      </div>
+    </div>
+    <div class="error-content">
+    <div class="head">
+      <img src="img/exclamation-icon.svg">
+      <p>Oops!</p>
+    </div>
+    <div class="msg">
+      <p> </p>
+    </div>
+    </div>
+    <div class="update-content">
+    <div class="head">
+      <img src="img/success-icon.svg">
+      <p>Updated</p>
+    </div>
+    <div class="msg">
+      <p> </p>
+    </div>
+    </div>  
+  </div>
+<!-- success popup end -->
+
+  <header> <!-- header -->
+   <nav>
+    <div class="left-container">
+     <div>
+      <img src="img/racing.png">
+      <p>Test Drive</p>
+     </div>
+     <h2>Welcome John!</h2>
+    </div>
+    <div class="right-container">
+     <img src="img/john.jpg" >
+     <p>John Wick</p>
+    </div>
+   </nav>
+  </header>
+  
+  <!-- header end -->
+  
+  <div class="main">
+   <div class="container">
+    <!-- left bar start -->
+    <div class="left-box">
+     <p id="header-text">Menu</p>
+     <div class="left-nav">
+      <div>
+        <a href="index.html">
+          <img src="img/dashboard.svg">
+          <p>Dash board</p>
+        </a>
+      </div>
+      <div>
+        <a href="booking.html">
+          <img src="img/booking.svg">
+          <p>Booking</p>
+        </a>
+      </div>
+      <div style="background: #E3E3E3;">
+        <a href="showroom.html">
+          <img style="border: .1px solid #123882;background: #123882;" src="img/showroom.svg">
+          <p style="color: #123882;">Showroom</p>
+        </a>
+      </div>
+      <div>
+        <a href="companies.html">
+          <img src="img/company.svg">
+          <p>Companies</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="img/feedback.svg">
+          <p>Feedback</p>
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="img/logout.svg">
+          <p>Logout</p>
+        </a>
+      </div>
+     </div>
+    </div>
+    <!-- left bar end -->
+    
+    <!-- right box start -->
+    <div class="right-box">
+     
+     <section>
+      <div>
+       <p>Showroom Details</p>
+      </div>
+      <div class="search-bar">
+       <div>
+       <input type="search" placeholder="Search.."><button>search</button>
+       </div>
+       <img id="screenBtn" src="img/full-screen-icon.svg">
+      </div>
+     </section>
+
+     <!-- showroom section -->
+     <div class="showroom-section">
+     </div>
+     <!-- showroom section end -->
+
+     
+    </div>
+    <!-- right box end -->
+   </div>
+  </div>
+  
+   
+   <script src="js/showroomDetails.js"></script>
+ 
+</body>
+</html>

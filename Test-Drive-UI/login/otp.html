@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Login Form with validation Example</title>
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="popup">
+  <div class="container">
+    <img src="../img/curved-success.svg">
+    <p></p>
+    <a href="index.html"><button>Continue</button></a>
+  </div>
+</div>
+<div id="login-form-wrap">
+  <h2>Verify OTP</h2>
+  <form id="login-form">
+    <div class="message">
+      <p></p>
+    </div>
+    <p>
+      <input type="number" id="otp" name="otp" placeholder=" Enter the 6 digit OTP" required>
+    </p>
+    <button type="submit" id="verify" value="Confirm">CONFIRM</button>
+    </p>
+  </form>
+  <div id="create-account-wrap">
+    <p>Didn't receive any OTP ?<a href="mailto:shibin.k.6235@gmail.com">contact us</a><p>
+  </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+
+<!-- partial -->
+<script src="js/otp.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Login Form with validation Example</title>
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div id="login-form-wrap">
+  <h2>SIGN UP</h2>
+  <form id="login-form" enctype="multipart/form-data">
+    <div class="message">
+      <p id="blink"></p>
+    </div>
+    <p>
+      <input type="text" id="name" name="name" placeholder=" Name" required>
+    </p>
+    <p>
+    <input type="email" id="email" name="email" placeholder=" Email" required>
+    </p>
+    <p>
+    <input type="password" id="password" name="password" placeholder=" Password" required>
+    </p>
+     <p>
+       <input type="password" id="confirm" name="confirm-pass" placeholder=" Confirm Password" required>
+     </p>
+      <p>
+        <input type="file" id="file" name="file" accept="image/png,image/jpeg" required>
+      </p>
+    <p>
+    <button type="submit" id="signup" value="SIGN UP">SIGN UP</button>
+    </p>
+  </form>
+  <div id="create-account-wrap">
+    <p>Already have an account? <a href="index.html">Login</a><p>
+  </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+
+<!-- partial -->
+  <script src="js/signup.js"></script>
+</body>
+</html>
+

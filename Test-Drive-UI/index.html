@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="#123882" name="theme-color"/>
+
+  <title>Test Drive UI</title>
+  <link rel="icon" href="img/racing.png"  type="image/x-icon">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="pre-loader">
+    <div class="circle">
+    </div>
+  </div>
+
+ <!-- POPUP -->
+ <div class="popup">
+  <div class="content">
+   <div class="top-section">
+    <div class="txt">
+     <p>Booking Details</p>
+    </div>
+    <div class="close-btn">
+     <img src="img/close-icon.svg">
+    </div>
+   </div>
+   
+  <!-- <form> -->
+    <div class="data-section">
+      <form name="formData">
+      <div class="details">
+        <p>Maruti Suzuki Selerio (vxi)</p>
+      </div>
+      <div class="form-data">
+        <div class="label">
+         <label>Full Name </label>
+        </div>
+        <input name="name" type="text" placeholder="Enter Your Full Name">
+      
+        <div class="label">
+         <label>Email address </label>
+        </div>
+        <input name="email" type="email" placeholder="sample@gmail.com" size="30">
+      
+        <div class="label">
+         <label>Phone number</label>
+        </div>
+        <input name="phone" id="phone" type="tel" placeholder="1234567890">
+        <div class="container">
+         <div>
+          <label>Date</label>
+          <label>Time</label>
+         </div>
+         <div>
+          <input name="date" type="date">
+          <input name="time" type="time">
+         </div>
+        </div>
+      
+        <div class="label">
+         <label>Available Showroom</label>
+        </div>
+        <select name="showrooms">
+         
+        </select>
+      
+        <button type="submit" id="submit-btn">Submit</button>
+      
+       </div>
+      </form>
+    </div>
+   <!-- </form> -->
+   
+  </div>
+ </div>
+ <!-- POPUP END -->
+ 
+ <!-- success popup -->
+ 
+ <div class="popup-box">
+ 
+   <div class="success-content">
+     <div class="head">
+      <img src="img/success-icon.svg">
+      <p>SUCCESS</p>
+     </div>
+     <div class="msg">
+      <p> </p>
+     </div>
+    </div>
+   <div class="error-content">
+    <div class="head">
+     <img src="img/exclamation-icon.svg">
+     <p>Oops!</p>
+    </div>
+    <div class="msg">
+     <p> </p>
+    </div>
+   </div>
+   <div class="update-content">
+    <div class="head">
+     <img src="img/success-icon.svg">
+     <p>Updated</p>
+    </div>
+    <div class="msg">
+     <p> </p>
+    </div>
+   </div>
+   
+ </div>
+ <!-- success popup end -->
+ 
+ <!-- delete confirmation -->
+ <div class="popup-confirmation">
+  <div class="content">
+   <img src="img/exclamation-triangle.svg">
+   <p>Are you sure you want to delete?</p>
+   <div class="control">
+    <button id="cancel">Cancel</button>
+    <button id="delete">Delete</button>
+   </div>
+  </div>
+ </div>
+  <!-- delete confirmation end -->
+  
+
+ 
+  <header> <!-- header -->
+   <nav>
+    <div class="left-container">
+     <div>
+      <img src="img/racing.png">
+      <p>Test Drive</p>
+     </div>
+     <h2>Welcome John!</h2>
+    </div>
+    <div class="right-container">
+     <img src="img/john.jpg" >
+     <p>John Wick</p>
+    </div>
+   </nav>
+  </header>
+  
+  <!-- header end -->
+  
+  <div class="main">
+   <div class="container">
+    <!-- left bar start -->
+    <div class="left-box">
+      <p id="header-text">Menu</p>
+      <div class="left-nav">
+       <div style="background: #E3E3E3;">
+         <a href="index.html">
+           <img style=" border: .1px solid #123882;background: #123882;" src="img/dashboard.svg">
+           <p style="color: #123882;">Dash board</p>
+         </a>
+       </div>
+       <div>
+         <a href="booking.html">
+           <img src="img/booking.svg">
+           <p>Booking</p>
+         </a>
+       </div>
+       <div>
+         <a href="showroom.html">
+           <img src="img/showroom.svg">
+           <p>Showroom</p>
+         </a>
+       </div>
+       <div>
+         <a href="companies.html">
+           <img src="img/company.svg">
+           <p>Companies</p>
+         </a>
+       </div>
+       <div>
+         <a href="#">
+           <img src="img/feedback.svg">
+           <p>Feedback</p>
+         </a>
+       </div>
+       <div>
+         <a href="#">
+           <img src="img/logout.svg">
+           <p>Logout</p>
+         </a>
+       </div>
+      </div>
+     </div>
+    <!-- left bar end -->
+    
+    <!-- right box start -->
+    <div class="right-box">
+     
+     <section>
+      <div>
+       <p>Available Cars</p>
+      </div>
+      <div class="search-bar">
+       <div>
+       <input id="search" type="search" placeholder="Search.." onkeyup="listSearchItems()"><button onclick="listSearchItems()">search</button>
+       <!-- search list -->
+       <ul id="list">
+
+       </ul>
+      <!-- search list end -->
+       </div>
+       <img id="screenBtn" src="img/full-screen-icon.svg">
+      </div>
+     </section>
+     <!-- data section start -->
+     <div class="card-loader">
+      <div class="circle"></div>
+     </div>
+    <div class="data-section">
+    </div>
+     <!-- data section end -->
+     
+     <!-- booking section start -->
+     <!----
+     <div class="booking-section">
+      <div class="row-container">
+       <div class="box-1">
+       <p>Maruti Suzuki celerio</p>
+       </div>
+       <div class="box-2">
+        <p>10/11/2023 12:00 pm</p>
+       </div>
+       <div class="box-3">
+        <img src="img/update-icon.svg">
+        <img id="trash" src="img/trash-icon.svg">
+       </div>
+      </div>
+      <div class="row-container">
+       <div class="box-1">
+        <p>Maruti Suzuki celerio</p>
+       </div>
+       <div class="box-2">
+        <p>10/11/2023 12:00 pm</p>
+       </div>
+       <div class="box-3">
+        <img src="img/update-icon.svg">
+        <img src="img/trash-icon.svg">
+       </div>
+      </div>
+      <div class="row-container">
+       <div class="box-1">
+        <p>Maruti Suzuki celerio</p>
+       </div>
+       <div class="box-2">
+        <p>10/11/2023 12:00 pm</p>
+       </div>
+       <div class="box-3">
+        <img src="img/update-icon.svg">
+        <img src="img/trash-icon.svg">
+       </div>
+      </div>
+      <div class="row-container">
+       <div class="box-1">
+        <p>Maruti Suzuki celerio</p>
+       </div>
+       <div class="box-2">
+        <p>10/11/2023 12:00 pm</p>
+       </div>
+       <div class="box-3">
+        <img src="img/update-icon.svg">
+        <img src="img/trash-icon.svg">
+       </div>
+      </div>
+      
+      
+     </div>
+      booking section end -->
+     
+     <!-- showroom section 
+     <div class="showroom-section">
+      <div class="row-container">
+       <div class="box-1">
+        <div class="img-wrapper">
+         <img src="img/showroom-car-dealer.jpg">
+        </div>
+       </div>
+       <div class="box-2">
+        <div>
+         <p id="address">Maruti Point Nadakkvu, Kozhikode Kerala 673579</p>
+        </div>
+        <div class="bx">
+         <p>Open</p>
+         <label>9762359401</label>
+        </div>
+       </div>
+      </div>
+      <div class="row-container">
+       <div class="box-1">
+        <div class="img-wrapper">
+         <img src="img/0.jpg">
+        </div>
+       </div>
+       <div class="box-2">
+        <div>
+         <p id="address">Maruti Point Nadakkvu, Kozhikode Kerala</p>
+        </div>
+        <div class="bx">
+         <p>Open</p>
+         <label>9762359401</label>
+        </div>
+       </div>
+      </div>
+      <div class="row-container">
+       <div class="box-1">
+        <div class="img-wrapper">
+         <img src="img/showroom-car-dealer.jpg">
+        </div>
+       </div>
+       <div class="box-2">
+        <div>
+         <p id="address">Maruti Point Nadakkvu, Kozhikode Kerala 673579</p>
+        </div>
+        <div class="bx">
+         <p>Open</p>
+         <label>9762359401</label>
+        </div>
+       </div>
+      </div>
+     </div>
+      showroom section end -->
+     
+     <!-- companies section 
+     <div class="companies-data">
+      <div class="container">
+       <div class="data">
+        <div class="right">
+         <p>Toyota</p>
+         </div>
+        <div class="left">
+         <p>20 +</p>
+         <label>cars</label>
+        </div>
+       </div>
+      </div>
+      <div class="container">
+       <div class="data">
+        <div class="right">
+         <p>Maruti Suzuki</p>
+        </div>
+        <div class="left">
+         <p>30 +</p>
+         <label>cars</label>
+        </div>
+       </div>
+      </div>
+      <div class="container">
+       <div class="data">
+        <div class="right">
+         <p>Volkswagen</p>
+        </div>
+        <div class="left">
+         <p>10 +</p>
+         <label>cars</label>
+        </div>
+       </div>
+      </div>
+      <div class="container">
+       <div class="data">
+        <div class="right">
+         <p>Mahindra</p>
+        </div>
+        <div class="left">
+         <p>20 +</p>
+         <label>cars</label>
+        </div>
+       </div>
+      </div>
+     </div>-->
+     <!-- companies section end -->
+    </div>
+    <!-- right box end -->
+   </div>
+  </div>
+  <script>
+    let preLoader = document.querySelector(".pre-loader")
+    window.addEventListener('load',()=>{
+      preLoader.style.display = "none"
+    })
+  </script>
+   <script src="js/dashboard.js"></script>
+ 
+</body>
+</html>
